@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    input, select, button {
+      margin: 10px 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Library Management System</h1>
+
+  <div>
+    <h3>Filters</h3>
+    <label for="filter-genre">Genre:</label>
+    <select id="filter-genre">
+      <option value="">All</option>
+      <option value="Science Fiction">Science Fiction</option>
+      <option value="Dystopian">Dystopian</option>
+    </select>
+
+    <label for="filter-available">Available:</label>
+    <select id="filter-available">
+      <option value="">All</option>
+      <option value="true">Available</option>
+      <option value="false">Not Available</option>
+    </select>
+  </div>
+
+  <div>
+    <h3>Sorting</h3>
+    <label for="sort-field">Sort By:</label>
+    <select id="sort-field">
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+      <option value="publishedYear">Published Year</option>
+    </select>
+
+    <label for="sort-order">Order:</label>
+    <select id="sort-order">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+  </div>
+
+  <div>
+    <h3>Pagination</h3>
+    <label for="items-per-page">Items Per Page:</label>
+    <input type="number" id="items-per-page" value="5">
+    <button id="previous-page">Previous</button>
+    <button id="next-page">Next</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Published Year</th>
+        <th>Available</th>
+      </tr>
+    </thead>
+    <tbody id="books-table">
+      <!-- Data will be dynamically rendered here -->
+    </tbody>
+  </table>
+</body>
+</html>
